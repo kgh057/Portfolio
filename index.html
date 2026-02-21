@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <!-- 메인 CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- 미디어쿼리 -->
+    <link rel="stylesheet" href="css/media.css" />
+
+    <!-- 메인 JS -->
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- 상단 -->
+    <header>
+      <div class="side">
+        <span>portfolio</span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About me</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 메인 -->
+    <main id="intro">
+      <div class="intro-content">
+        <p class="greeting">안녕하세요. 김근해 입니다.</p>
+        <h1 class="intro-text">
+          저는 <span class="typing-text"></span
+          ><span class="cursor-blink"></span> 하고 있어요.
+        </h1>
+        <p class="subtitle">
+          사용자 경험을 중심으로 생각하며,<br />
+          아이디어를 실현하는 크리에이터입니다.
+        </p>
+        <div class="social-links">
+          <a href="#">GitHub</a>
+          <a href="#">Email</a>
+        </div>
+      </div>
+      <!-- scroll -->
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-arrow">↓</div>
+      </div>
+    </main>
+
+    <!-- 프로젝트 -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-list">
+          <!-- 프로젝트 1 -->
+          <div class="project-item">
+            <div class="project-image-wrapper">
+              <img src="image/thumbnail.png" alt="무지개맨션" />
+            </div>
+            <h3 class="project-title">무지개맨션 사이트 사용성 개선</h3>
+            <p class="project-description">
+              온라인 쇼핑몰의 사용자 경험을 개선한 개인 프로젝트입니다.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Photoshop</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+          <!-- 프로젝트 2 -->
+          <div class="project-item">
+            <div class="project-image-wrapper">
+              <img src="image/thumbnail.png" alt="마비노기" />
+            </div>
+            <h3 class="project-title">마비노기 모바일 사이트 리디자인</h3>
+            <p class="project-description">
+              기업 브랜드 아이덴티티를 반영한 웹사이트 리뉴얼 프로젝트입니다.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Photoshop</span>
+              <span class="tag">Figma</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 소개 -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+      </div>
+    </section>
+
+    <!-- Career -->
+    <section id="career">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Connection</h2>
+      </div>
+    </section>
+
+    <!-- 하단 -->
+    <footer>
+      <p>© 2026 Kim Geunhae</p>
+    </footer>
+
+    <!-- scroll-top -->
+    <button class="scroll-top" id="scrollTop">↑</button>
+  </body>
+</html>

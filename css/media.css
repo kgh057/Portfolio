@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/************************************* 1024 *************************************/
+@media (max-width: 1024px) {
+  /* 화면 왼쪽의 포트폴리오 없애기 */
+  .side {
+    display: none;
+  }
+
+  /* 화면 왼쪽 카테고리 가운데로 */
+  header {
+    justify-content: center;
+  }
+
+  /* 카테고리가 전체 너비를 차지하도록 */
+  nav {
+    width: 100%;
+  }
+
+  nav .nav-links {
+    justify-content: space-between;
+    white-space: nowrap;
+  }
+}
