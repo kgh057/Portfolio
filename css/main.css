@@ -318,6 +318,47 @@ main {
   background: #0a0a0a;
 }
 
+/************************************* 경험 *************************************/
+#Experience {
+  padding: 120px 20px;
+  background: #0a0a0a;
+}
+
+.Experience-list {
+  max-width: 900px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.Experience-item {
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.Experience-content {
+  display: grid;
+  grid-template-columns: 200px 1fr 180px;
+  gap: 24px;
+  align-items: center;
+}
+
+.Experience-title {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.Experience-course {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.Experience-date {
+  font-size: 13px;
+  color: #ffffff;
+  text-align: right;
+  letter-spacing: 0.3px;
+}
+
 /************************************* 연락 *************************************/
 #contact {
   padding: 120px 20px;
