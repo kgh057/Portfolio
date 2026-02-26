@@ -22,3 +22,14 @@
     white-space: nowrap;
   }
 }
+
+/* ************************************* 768 *************************************/
+@media (max-width: 768px) {
+  /* Activities list */
+  .Activities-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

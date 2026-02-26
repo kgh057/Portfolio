@@ -319,41 +319,38 @@ main {
 }
 
 /************************************* 경험 *************************************/
-#Experience {
+#Activities {
   padding: 120px 30px;
   background: #0a0a0a;
 }
 
-.Experience-list {
+.Activities-list {
   margin: 0 auto;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.Experience-item {
+.Activities-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
   padding: 28px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.Experience-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-}
-
-.Experience-title {
+.Activities-title {
   font-size: 14px;
   color: #ffffff;
 }
 
-.Experience-course {
+.Activities-course {
   display: flex;
   flex-direction: column;
   gap: 8px;
   font-size: 14px;
   color: #ffffff;
+  word-break: keep-all;
 }
 
-.Experience-date {
+.Activities-date {
   font-size: 13px;
   color: #ffffff;
   text-align: right;
