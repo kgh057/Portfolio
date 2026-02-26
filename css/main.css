@@ -67,14 +67,14 @@ nav .nav-links a {
 
 /************************************* 인트로 *************************************/
 main {
+  position: relative;
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 .intro-content {
@@ -325,7 +325,6 @@ main {
 }
 
 .Experience-list {
-  max-width: 900px;
   margin: 0 auto;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -337,8 +336,7 @@ main {
 
 .Experience-content {
   display: grid;
-  grid-template-columns: 200px 1fr 180px;
-  gap: 24px;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 }
 
@@ -348,16 +346,11 @@ main {
 }
 
 .Experience-course {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   font-size: 14px;
   color: #ffffff;
-}
-
-.Experience-course span {
-  display: block;
-}
-
-.Experience-course span:first-child {
-  margin-bottom: 8px;
 }
 
 .Experience-date {
@@ -369,7 +362,7 @@ main {
 
 /************************************* 연락 *************************************/
 #contact {
-  padding: 120px 0px;
+  padding: 120px 30px;
   background: #0a0a0a;
 }
 
