@@ -364,20 +364,18 @@ main {
 }
 
 .contact-list {
-  max-width: 900px;
   margin: 0 auto;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .contact-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 28px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  color: #ffffff;
-  text-decoration: none;
   font-size: 14px;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 28px 0;
+  text-decoration: none;
   transition: color 0.3s;
 }
 
