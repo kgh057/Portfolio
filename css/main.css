@@ -5,12 +5,15 @@
 
 /* 프리텐다드 폰트 */
 /* font-weight: 숫자입력;
+100 = Thin
 200 = ExtraLight (매우 얇음)
-300 = Light (얇음) !
+300 = Light (얇음) 
 400 = Regular (보통)
 500 = Medium (중간)
 600 = SemiBold (약간 두꺼움)
-700 = Bold (두꺼움) */
+700 = Bold (두꺼움) 
+800 = ExtraBold (매우 두꺼움)
+900 = Black */
 
 * {
   margin: 0;
@@ -25,9 +28,9 @@ html {
 
 body {
   font-family: "pretendard";
-  font-weight: 300;
+  font-weight: 200;
   background: #0a0a0a;
-  color: #ffffff;
+  color: #fff;
 }
 
 /************************************* 상단 *************************************/
@@ -47,7 +50,6 @@ header {
 /* portfolio */
 .side span {
   font-size: 16px;
-  font-weight: 200;
 }
 
 nav .nav-links {
@@ -60,7 +62,6 @@ nav .nav-links a {
   position: relative;
   color: #fff;
   font-size: 16px;
-  font-weight: 200;
   text-decoration: none;
 }
 
@@ -252,13 +253,6 @@ main {
   line-height: 1.3;
 }
 
-.project-description {
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.6;
-  margin-bottom: 16px;
-}
-
 .project-tags {
   display: flex;
   gap: 8px;
@@ -340,7 +334,7 @@ main {
   margin: 0 auto;
 }
 
-.contact-item {
+.contact-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -349,6 +343,19 @@ main {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   padding: 28px 0;
   text-decoration: none;
+}
+
+.contact-label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.contact-sub {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  display: block;
 }
 
 /************************************* 하단 *************************************/
