@@ -44,6 +44,12 @@ max-width : 기본값 데스크탑 먼저
     padding: 30px 30px;
   }
 
+  /* 프로젝트 */
+  .projects-list{
+    display: flex;
+    flex-direction: column;
+  }
+
   /* Activities list */
   .Activities-content {
     display: flex;
