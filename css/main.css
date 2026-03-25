@@ -29,7 +29,7 @@ html {
 body {
   font-family: "pretendard";
   font-weight: 200;
-  background: #0a0a0a;
+  background: #121212;
   color: #fff;
 }
 
@@ -206,7 +206,6 @@ main {
 /************************************* 프로젝트 *************************************/
 .projects {
   padding: 120px 30px;
-  background: #0a0a0a;
 }
 
 .container {
@@ -272,7 +271,6 @@ main {
 /************************************* 소개 *************************************/
 #about {
   padding: 120px 30px;
-  background: #0a0a0a;
 }
 
 .skill-list {
@@ -285,7 +283,6 @@ main {
 /************************************* 경험 *************************************/
 #Activities {
   padding: 120px 30px;
-  background: #0a0a0a;
 }
 
 .Activities-list {
@@ -327,11 +324,11 @@ main {
 /************************************* 연락 *************************************/
 #contact {
   padding: 120px 30px;
-  background: #0a0a0a;
 }
 
 .contact-list {
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .contact-content {
