@@ -70,7 +70,7 @@ max-width : 기본값 데스크탑 먼저
   }
 
   /* Connection */
-  .contact-list{
+  .contact-list {
     display: flex;
     flex-direction: column;
   }
@@ -78,6 +78,12 @@ max-width : 기본값 데스크탑 먼저
 
 /************************************* 430 *************************************/
 @media (max-width: 430px) {
+  /* 상단 */
+  nav .nav-links a {
+    font-size: 14px;
+  }
+
+  /* 프로젝트 */
   .project-title {
     font-size: 18px;
   }
