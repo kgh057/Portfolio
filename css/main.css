@@ -199,18 +199,19 @@ main {
   font-size: 48px;
   font-weight: 600;
   color: #ffffff;
-  margin-bottom: 70px;
-  text-align: center;
+  margin-bottom: 60px;
 }
+
+/************************************* 각 컨테이너 *************************************/
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 
 /************************************* 프로젝트 *************************************/
 .projects {
   padding: 120px 30px;
-}
-
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
 }
 
 .projects-list {
@@ -315,7 +316,7 @@ main {
 }
 
 .Activities-date {
-  font-size: 13px;
+  font-size: 14px;
   color: #ffffff;
   text-align: right;
   letter-spacing: 0.3px;
@@ -342,8 +343,8 @@ main {
   text-decoration: none;
 }
 
-.contact-label {
-  font-size: 16px;
+.contact-title {
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 6px;
   display: block;

@@ -37,17 +37,28 @@ max-width : 기본값 데스크탑 먼저
   }
 }
 
+/************************************* 850 *************************************/
+@media (max-width: 850px) {
+  /* 프로젝트 */
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-title {
+    font-size: 20px;
+  }
+
+  .tag {
+    font-size: 10px;
+  }
+}
+
 /************************************* 768 *************************************/
 @media (max-width: 768px) {
   /* 상단 */
   header {
     padding: 30px 30px;
-  }
-
-  /* 프로젝트 */
-  .projects-list{
-    display: flex;
-    flex-direction: column;
   }
 
   /* Activities list */
@@ -57,10 +68,20 @@ max-width : 기본값 데스크탑 먼저
     align-items: flex-start;
     gap: 12px;
   }
+
+  /* Connection */
+  .contact-list{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /************************************* 430 *************************************/
 @media (max-width: 430px) {
+  .project-title {
+    font-size: 18px;
+  }
+
   /* 하단 */
   footer {
     display: flex;
