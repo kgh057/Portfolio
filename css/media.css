@@ -35,6 +35,11 @@ max-width : 기본값 데스크탑 먼저
     gap: 0;
     white-space: nowrap;
   }
+
+  /* 프로젝트 이미지 마우스 호버시 제거 */
+  .project-content:hover .project-image img {
+    transform: none;
+  }
 }
 
 /************************************* 850 *************************************/
