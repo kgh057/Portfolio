@@ -71,6 +71,10 @@ max-width : 기본값 데스크탑 먼저
     font-size: 18px;
   }
 
+  .intro-text {
+    font-size: 48px;
+  }
+
   /* Activities list */
   .Activities-content {
     display: flex;

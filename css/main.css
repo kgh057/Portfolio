@@ -93,6 +93,7 @@ main {
   font-weight: 600;
   line-height: 1.4;
   margin-bottom: 30px;
+  word-break: keep-all;
 }
 
 /* 타이핑 효과 단어 */
@@ -165,7 +166,7 @@ main {
   box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
 }
 
-/* 스크롤 */
+/* 스크롤 안내 */
 .scroll-indicator {
   position: absolute;
   bottom: 60px;
@@ -207,7 +208,6 @@ main {
   max-width: 1400px;
   margin: 0 auto;
 }
-
 
 /************************************* 프로젝트 *************************************/
 .projects {
