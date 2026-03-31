@@ -83,6 +83,14 @@ max-width : 기본값 데스크탑 먼저
     gap: 12px;
   }
 
+  .Activities-title {
+    flex-direction: row;
+  }
+
+  .Activities-course {
+    flex-direction: row;
+  }
+
   /* Connection */
   .contact-list {
     display: flex;

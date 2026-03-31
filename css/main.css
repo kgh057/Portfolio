@@ -353,7 +353,7 @@ main {
 
 .contact-sub {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgb(255 255 255 / 0.6);
   display: block;
 }
 
