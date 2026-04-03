@@ -276,11 +276,39 @@ main {
   padding: 120px 30px;
 }
 
-.skill-list {
+.about-greeting {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.about-desc {
+  font-size: 15px;
+  font-weight: 300;
+  color: rgb(255 255 255 / 70%);
+  line-height: 1.9;
+  margin-bottom: 60px;
+  word-break: keep-all;
+}
+
+.skills {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.skills-label {
+  font-size: 13px;
+  color: rgb(255 255 255 / 0.7);
+}
+
+.skills-value {
   font-size: 14px;
-  gap: 12px;
+  color: #ffffff;
 }
 
 /************************************* 경험 *************************************/
