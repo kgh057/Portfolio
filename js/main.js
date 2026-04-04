@@ -79,3 +79,26 @@ scrollTopButton.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+/************************************* 스크롤 reveal *************************************/
+// reveal 클래스가 붙은 요소 전부 선택
+const revealElements = document.querySelectorAll(".reveal");
+
+// IntersectionObserver: 요소가 화면에 들어오는지 감지하는 API
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      // 요소가 화면에 들어왔을 때
+      if (entry.isIntersecting) {
+        // visible 클래스 추가 → CSS에서 opacity: 1, translateY(0) 으로 변환
+        entry.target.classList.add("visible");
+      }
+    });
+  },
+  {
+    threshold: 0.15, // 요소가 화면에 15% 보일 때 감지 시작 (0~1 사이 값, 높을수록 더 많이 스크롤해야 등장)
+  },
+);
+
+// 선택한 요소들 하나씩 observer에 등록
+revealElements.forEach((el) => revealObserver.observe(el));
