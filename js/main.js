@@ -1,12 +1,14 @@
 // history.scrollRestoration = 'manual';
 /************************************* 타이핑 효과 *************************************/
+// 순서대로 타이핑할 단어 목록
 const words = ["기획", "디자인", "구현"];
-let wordIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let cycleCount = 0;
-const maxCycles = 3;
+let wordIndex = 0; // 현재 단어 인덱스
+let charIndex = 0; // 현재 타이핑 중인 글자 인덱스
+let isDeleting = false; // 지우는 중인지 여부
+let cycleCount = 0; // 전체 반복 횟수
+const maxCycles = 3; // 최대 반복 횟수 (3번 반복 후 멈춤)
 
+// 타이핑 텍스트와 커서 요소 선택
 const typingElement = document.querySelector(".typing-text");
 const cursorElement = document.querySelector(".cursor-blink");
 
@@ -14,65 +16,76 @@ function type() {
   const currentWord = words[wordIndex];
 
   if (isDeleting) {
+    // 지우는 중: 글자 한 자씩 줄임
     typingElement.textContent = currentWord.substring(0, charIndex - 1);
     charIndex--;
   } else {
+    // 타이핑 중: 글자 한 자씩 늘림
     typingElement.textContent = currentWord.substring(0, charIndex + 1);
     charIndex++;
   }
 
+  // 지울 때는 빠르게(100ms), 타이핑할 때는 느리게(200ms)
   let typeSpeed = isDeleting ? 100 : 200;
 
   if (!isDeleting && charIndex === currentWord.length) {
     // 마지막 반복의 마지막 단어에서 멈춤
     if (cycleCount >= maxCycles - 1 && wordIndex === words.length - 1) {
       setTimeout(() => {
+        // 커서 페이드아웃 애니메이션 실행
         cursorElement.style.animation = "fadeOutCursor 1s forwards";
       }, 2000);
       return;
     }
-    typeSpeed = 2000;
-    isDeleting = true;
+    typeSpeed = 2000; // 단어 완성 후 2초 대기
+    isDeleting = true; // 지우기 시작
   } else if (isDeleting && charIndex === 0) {
+    // 단어를 다 지웠을 때
     isDeleting = false;
-    wordIndex++;
+    wordIndex++; // 다음 단어로 이동
 
     if (wordIndex >= words.length) {
+      // 마지막 단어까지 끝나면 처음 단어로 돌아가고 반복 횟수 증가
       wordIndex = 0;
       cycleCount++;
     }
 
-    typeSpeed = 500;
+    typeSpeed = 500; // 다음 단어 타이핑 전 0.5초 대기
   }
 
   setTimeout(type, typeSpeed);
 }
 
-// 페이지 로드시 타이핑 시작
+// 페이지 로드시 0.5초 후 타이핑 시작
 setTimeout(type, 500);
 
 /************************************* 위로 올라가기 버튼 *************************************/
+
+// 버튼 요소와 인트로 섹션(main) 선택
 const scrollTopButton = document.querySelector(".scroll-top");
 const introSection = document.querySelector("main");
 
 const observerOptions = {
-  root: null,
-  threshold: 0.8,
+  root: null, // 기준: 브라우저 전체 화면
+  threshold: 0.8, // main 섹션이 80% 이상 보이면 인트로로 간주
 };
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) {
+      // main 섹션이 화면에서 벗어나면 버튼 표시
       scrollTopButton.classList.add("visible");
     } else {
+      // main 섹션이 화면에 있으면 버튼 숨김
       scrollTopButton.classList.remove("visible");
     }
   });
 }, observerOptions);
 
+// main 섹션 감지 시작
 observer.observe(introSection);
 
-// 클릭 이벤트
+// 버튼 클릭 시 페이지 최상단으로 부드럽게 스크롤
 scrollTopButton.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
