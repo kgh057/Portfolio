@@ -15,6 +15,11 @@
 800 = ExtraBold (매우 두꺼움)
 900 = Black */
 
+::selection {
+  background-color: #6366f1;
+  color: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
