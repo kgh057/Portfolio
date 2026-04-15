@@ -1,4 +1,108 @@
 // history.scrollRestoration = 'manual';
+/************************************* 버블 캔버스 *************************************/
+const bubbleCanvas = document.getElementById("bubble-canvas");
+const bCtx = bubbleCanvas.getContext("2d");
+
+// 캔버스 크기를 부모(main)에 맞게 설정
+function resizeBubbleCanvas() {
+  bubbleCanvas.width = bubbleCanvas.offsetWidth;
+  bubbleCanvas.height = bubbleCanvas.offsetHeight;
+}
+resizeBubbleCanvas();
+window.addEventListener("resize", resizeBubbleCanvas);
+
+// ── 조절할 수 있는 값 ────────────────────────────────────────
+const BUBBLE_OPACITY = 0.1;  // blur랑 같이 쓰면 높아도 괜찮음
+const BUBBLE_BLUR    = 60;    // 흐림 정도 (px) — 높을수록 더 번짐
+const BUBBLE_COUNT = 5; // 동시에 떠있는 버블 수
+const BUBBLE_MIN_R = 250; // 버블 최소 크기
+const BUBBLE_MAX_R = 400; // 버블 최대 크기
+const BUBBLE_SPEED = 0.2; // 버블 이동 속도
+// ─────────────────────────────────────────────────────────────
+
+// 버블 하나 생성 (anim = 0이면 화면 내 랜덤 위치, 1이면 아래에서 올라옴)
+function makeBubble(fromBottom = false) {
+  const W = bubbleCanvas.width;
+  const H = bubbleCanvas.height;
+
+  const targetR = BUBBLE_MIN_R + Math.random() * (BUBBLE_MAX_R - BUBBLE_MIN_R);
+
+  return {
+    x: W * 0.05 + Math.random() * W * 0.9, // 화면 전체에서 완전 랜덤 x
+    y: fromBottom ? H + targetR : Math.random() * H, // 아래에서 올라오거나 화면 내 랜덤
+    r: fromBottom ? 0 : targetR, // 아래에서 올라올 땐 0에서 시작
+    targetR,
+    speedY: -(BUBBLE_SPEED * (0.5 + Math.random() * 0.5)),
+    speedX: (Math.random() - 0.5) * 0.15,
+    opacity: fromBottom ? 0 : Math.random() * 0.6, // 처음 배치된 버블은 이미 살짝 보이게
+    fadeOut: false, // 페이드아웃 중인지 여부
+    wobble: Math.random() * Math.PI * 2,
+    wobbleSpeed: 0.004 + Math.random() * 0.005,
+  };
+}
+
+// 처음엔 버블들을 화면 내 랜덤 위치에 배치
+const bubbleList = Array.from({ length: BUBBLE_COUNT }, () =>
+  makeBubble(false),
+);
+
+function drawBubbles() {
+  const W = bubbleCanvas.width;
+  const H = bubbleCanvas.height;
+
+  bCtx.clearRect(0, 0, W, H);
+
+  for (let i = 0; i < bubbleList.length; i++) {
+    const b = bubbleList[i];
+
+    // 크기: 목표 크기를 향해 서서히 커짐
+    b.r += (b.targetR - b.r) * 0.012;
+
+    // 위치 이동
+    b.wobble += b.wobbleSpeed;
+    b.x += b.speedX + Math.sin(b.wobble) * 0.25;
+    b.y += b.speedY;
+
+    // 화면 상단 근처(위에서 20% 지점)에 오면 페이드아웃 시작
+    if (b.y < H * 0.2 && !b.fadeOut) {
+      b.fadeOut = true;
+    }
+
+    if (b.fadeOut) {
+      // 페이드아웃: 투명도 서서히 줄임
+      b.opacity = Math.max(b.opacity - 0.004, 0);
+
+      // 완전히 투명해지면 → 즉시 새 버블로 교체 (아래에서 올라오는 것으로)
+      if (b.opacity <= 0) {
+        bubbleList[i] = makeBubble(true);
+      }
+    } else {
+      // 페이드인: 투명도 서서히 올림
+      b.opacity = Math.min(b.opacity + 0.003, 1);
+    }
+
+    // radialGradient: 중심은 살짝 색이 있고 가장자리로 갈수록 투명
+    const grad = bCtx.createRadialGradient(b.x, b.y, 0, b.x, b.y, b.r);
+    grad.addColorStop(
+      0,
+      `rgba(99,102,241,${BUBBLE_OPACITY * 2.5 * b.opacity})`,
+    );
+    grad.addColorStop(
+      0.45,
+      `rgba(99,102,241,${BUBBLE_OPACITY * 1.2 * b.opacity})`,
+    );
+    grad.addColorStop(1, `rgba(99,102,241,0)`);
+
+    bCtx.beginPath();
+    bCtx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+    bCtx.fillStyle = grad;
+    bCtx.fill();
+  }
+
+  requestAnimationFrame(drawBubbles);
+}
+
+drawBubbles();
 /************************************* 타이핑 효과 *************************************/
 // 순서대로 타이핑할 단어 목록
 const words = ["기획", "디자인", "구현"];
