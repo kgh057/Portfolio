@@ -75,6 +75,22 @@ max-width : 기본값 데스크탑 먼저
     font-size: 48px;
   }
 
+  .subtitle{
+    font-size: 16px;
+  }
+
+  /* 스크롤 안내 */
+  .scroll-indicator span{
+    font-size: 14px;
+  }
+
+  /* 화살표 */
+  .scroll-arrow{
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+  }
+
   /* Activities list */
   .Activities-content {
     display: flex;

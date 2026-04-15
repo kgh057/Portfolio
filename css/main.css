@@ -90,7 +90,8 @@ main {
 .greeting {
   font-size: 20px;
   margin-bottom: 20px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  word-break: keep-all;
 }
 
 .intro-text {
@@ -138,7 +139,9 @@ main {
   font-size: 18px;
   max-width: 600px;
   margin: 0 auto 40px;
+  letter-spacing: 1px;
   line-height: 1.6;
+  word-break: keep-all;
 }
 
 /* 링크 */
