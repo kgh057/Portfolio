@@ -82,25 +82,6 @@ main {
   padding: 0 30px;
 }
 
-#bubble-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-  /* 블러 수치를 100px 이상으로 높여서 '원'이 아닌 '빛의 덩어리'로 만듭니다 */
-  filter: blur(120px); 
-  opacity: 0.6; /* 너무 진하면 수치를 낮추세요 */
-}
-
-.intro-content,
-.scroll-indicator {
-  position: relative;
-  z-index: 1;
-}
-
 .intro-content {
   text-align: center;
   z-index: 1;
