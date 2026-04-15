@@ -51,9 +51,7 @@ function drawBubbles() {
   const H = bubbleCanvas.height;
 
   bCtx.clearRect(0, 0, W, H);
-  bCtx.filter = `blur(${BUBBLE_BLUR}px)`;
 
-  bCtx.filter = "none";  // 루프 끝나고 반드시 초기화
 
   for (let i = 0; i < bubbleList.length; i++) {
     const b = bubbleList[i];
