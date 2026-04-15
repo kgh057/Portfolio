@@ -12,12 +12,12 @@ resizeBubbleCanvas();
 window.addEventListener("resize", resizeBubbleCanvas);
 
 // ── 조절할 수 있는 값 ────────────────────────────────────────
-const BUBBLE_OPACITY = 0.1;  // blur랑 같이 쓰면 높아도 괜찮음
+const BUBBLE_OPACITY = 0.25;  // blur랑 같이 쓰면 높아도 괜찮음
 const BUBBLE_BLUR    = 60;    // 흐림 정도 (px) — 높을수록 더 번짐
-const BUBBLE_COUNT = 5; // 동시에 떠있는 버블 수
-const BUBBLE_MIN_R = 250; // 버블 최소 크기
-const BUBBLE_MAX_R = 400; // 버블 최대 크기
-const BUBBLE_SPEED = 0.2; // 버블 이동 속도
+const BUBBLE_COUNT = 3; // 동시에 떠있는 버블 수
+const BUBBLE_MIN_R = 400; // 버블 최소 크기
+const BUBBLE_MAX_R = 600; // 버블 최대 크기
+const BUBBLE_SPEED = 0.05; // 버블 이동 속도
 // ─────────────────────────────────────────────────────────────
 
 // 버블 하나 생성 (anim = 0이면 화면 내 랜덤 위치, 1이면 아래에서 올라옴)
@@ -51,6 +51,9 @@ function drawBubbles() {
   const H = bubbleCanvas.height;
 
   bCtx.clearRect(0, 0, W, H);
+  bCtx.filter = `blur(${BUBBLE_BLUR}px)`;
+
+  bCtx.filter = "none";  // 루프 끝나고 반드시 초기화
 
   for (let i = 0; i < bubbleList.length; i++) {
     const b = bubbleList[i];
