@@ -63,6 +63,10 @@ max-width : 기본값 데스크탑 먼저
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
+  .about-image {
+    margin: 0 auto;
+  }
 }
 
 /************************************* 768 *************************************/
@@ -81,17 +85,17 @@ max-width : 기본값 데스크탑 먼저
     font-size: 48px;
   }
 
-  .subtitle{
+  .subtitle {
     font-size: 16px;
   }
 
   /* 스크롤 안내 */
-  .scroll-indicator span{
+  .scroll-indicator span {
     font-size: 14px;
   }
 
   /* 화살표 */
-  .scroll-arrow{
+  .scroll-arrow {
     width: 25px;
     height: 25px;
     font-size: 16px;
