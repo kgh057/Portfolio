@@ -314,10 +314,10 @@ main {
 }
 
 .about-desc {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 300;
   color: rgb(255 255 255 / 70%);
-  line-height: 1.9;
+  line-height: 1.8;
   margin-bottom: 60px;
   word-break: keep-all;
 }
@@ -410,7 +410,7 @@ main {
 }
 
 .contact-sub {
-  font-size: 13px;
+  font-size: 14px;
   color: rgb(255 255 255 / 0.7);
   display: block;
 }
