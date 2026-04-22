@@ -44,6 +44,7 @@ max-width : 기본값 데스크탑 먼저
 
 /************************************* 870 *************************************/
 @media (max-width: 870px) {
+  /* 프로젝트 제목 */
   .project-title {
     font-size: 22px;
   }
@@ -57,10 +58,12 @@ max-width : 기본값 데스크탑 먼저
     flex-direction: column;
   }
 
+  /* 프로젝트 제목 */
   .project-title {
     font-size: 20px;
   }
 
+  /* 프로젝트 태그 */
   .tag {
     font-size: 10px;
   }
