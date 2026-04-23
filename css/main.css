@@ -194,13 +194,19 @@ main {
 .scroll-arrow {
   width: 30px;
   height: 30px;
-  font-size: 20px;
   border: 1px solid #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  overflow: hidden;
+}
+
+.scroll-arrow img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
 }
 
 /************************************* 각 제목 *************************************/
@@ -460,9 +466,8 @@ footer {
   right: 15px;
   width: 30px;
   height: 30px;
-  font-size: 20px;
   color: #fff;
-  background: transparent;
+  background: #121212;
   border: 1px solid #fff;
   border-radius: 50%;
   display: flex;
@@ -474,11 +479,12 @@ footer {
   transition:
     opacity 0.6s ease,
     visibility 0.6s;
+}
 
-  /* 화살표 모양 동일하게 */
-  padding: 0;
-  margin: 0;
-  font-family: inherit; /* 폰트 상속 받게 */
+.scroll-top img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
 }
 
 .scroll-top.visible {
