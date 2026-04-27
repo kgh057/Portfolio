@@ -321,6 +321,71 @@ main {
   font-weight: 500;
 }
 
+/************************************* 프로젝트 모달 *************************************/
+.lightbox-trigger {
+  cursor: pointer;
+}
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.lightbox-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-box {
+  position: relative;
+  max-width: 800px;
+  width: 90%;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.lightbox-img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+}
+
+.lightbox-info {
+  margin-top: 16px;
+}
+
+.lightbox-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.lightbox-desc {
+  font-size: 14px;
+  color: rgb(255 255 255 / 70%);
+}
+
 /************************************* 소개 *************************************/
 #about {
   padding: 120px 30px;

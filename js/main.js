@@ -115,3 +115,47 @@ const revealObserver = new IntersectionObserver(
 
 // 선택한 요소들 하나씩 observer에 등록
 revealElements.forEach((el) => revealObserver.observe(el));
+
+/************************************* 프로젝트 모달 *************************************/
+// 모달 관련 요소 선택
+const lightbox = document.getElementById("lightbox"); // 어두운 배경 전체
+const lightboxImg = document.getElementById("lightboxImg"); // 모달 안 이미지
+const lightboxTitle = document.getElementById("lightboxTitle"); // 모달 안 제목
+const lightboxDesc = document.getElementById("lightboxDesc"); // 모달 안 설명
+const lightboxClose = document.getElementById("lightboxClose"); // 닫기 버튼
+
+// lightbox-trigger 클래스가 붙은 요소 전부 선택 
+document.querySelectorAll(".lightbox-trigger").forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    // 클릭한 요소의 data 속성값을 모달 안에 채워넣음
+    lightboxImg.src = trigger.dataset.img;
+    lightboxImg.alt = trigger.dataset.title;
+    lightboxTitle.textContent = trigger.dataset.title;
+    lightboxDesc.textContent = trigger.dataset.desc;
+    // active 클래스 추가 → CSS에서 opacity: 1, visibility: visible 로 전환되며 모달 등장
+    lightbox.classList.add("active");
+    // 모달 열린 동안 뒤 페이지 스크롤 방지
+    document.body.style.overflow = "hidden";
+  });
+});
+
+// 닫기 버튼(✕) 클릭 시 모달 닫기
+lightboxClose.addEventListener("click", closeLightbox);
+
+// 어두운 배경 클릭 시 모달 닫기 (lightbox-box 바깥 영역 클릭 감지)
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+// ESC 키 입력 시 모달 닫기
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeLightbox();
+});
+
+// 모달 닫기 함수
+function closeLightbox() {
+  // active 클래스 제거 → CSS에서 opacity: 0, visibility: hidden 으로 전환되며 모달 사라짐
+  lightbox.classList.remove("active");
+  // 스크롤 방지 해제
+  document.body.style.overflow = "";
+}

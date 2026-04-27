@@ -138,13 +138,14 @@
 
           <!-- 프로젝트 3 -->
           <div class="project-content">
-            <a
-              href="#"
-              target="_blank"
-              class="project-image"
+            <div
+              class="project-image lightbox-trigger"
+              data-img="image/dasique3.png"
+              data-title="데이지크 립 제품 연출컷 제작"
+              data-desc="제품 : 수플레 컬러 팟"
             >
               <img src="image/dasique3.png" alt="데이지크 립 제품 연출컷" />
-            </a>
+            </div>
             <div class="project-header">
               <h3 class="project-title">데이지크 립 제품 연출컷 제작</h3>
             </div>
@@ -157,6 +158,18 @@
         </div>
       </div>
     </section>
+
+    <!-- 프로젝트 모달 -->
+    <div class="lightbox-overlay" id="lightbox">
+      <div class="lightbox-box">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <img src="" alt="" class="lightbox-img" id="lightboxImg" />
+        <div class="lightbox-info">
+          <p class="lightbox-title" id="lightboxTitle"></p>
+          <p class="lightbox-desc" id="lightboxDesc"></p>
+        </div>
+      </div>
+    </div>
 
     <!-- 소개 -->
     <section id="about">
