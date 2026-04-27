@@ -299,10 +299,15 @@ main {
   object-fit: cover;
 }
 
-.dis {
+.project-desc {
   font-size: 16px;
   margin-bottom: 14px;
   color: rgb(255 255 255 / 70%);
+}
+
+/* 프로젝트 3 이미지 위치 조정 */
+.project-content:nth-child(3) .project-image img {
+  object-position: center top;
 }
 
 /* 프로젝트 태그 */
