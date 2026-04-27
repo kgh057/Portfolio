@@ -299,6 +299,12 @@ main {
   object-fit: cover;
 }
 
+.dis {
+  font-size: 16px;
+  margin-bottom: 14px;
+  color: rgb(255 255 255 / 70%);
+}
+
 /* 프로젝트 태그 */
 .project-tags {
   display: flex;
