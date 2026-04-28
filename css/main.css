@@ -357,6 +357,7 @@ main {
   width: 90%;
 }
 
+/* 모달 닫기 */
 .lightbox-close {
   position: absolute;
   top: -40px;
@@ -369,13 +370,14 @@ main {
   line-height: 1;
 }
 
+/* 모달 이미지 */
 .lightbox-img {
   width: 100%;
   border-radius: 16px;
   display: block;
 }
 
-.lightbox-info {
+/* .lightbox-info {
   margin-top: 16px;
 }
 
@@ -389,7 +391,7 @@ main {
 .lightbox-desc {
   font-size: 14px;
   color: rgb(255 255 255 / 70%);
-}
+} */
 
 /************************************* 소개 *************************************/
 #about {
