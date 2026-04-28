@@ -120,8 +120,8 @@ revealElements.forEach((el) => revealObserver.observe(el));
 // 모달 관련 요소 선택
 const lightbox = document.getElementById("lightbox"); // 어두운 배경 전체
 const lightboxImg = document.getElementById("lightboxImg"); // 모달 안 이미지
-const lightboxTitle = document.getElementById("lightboxTitle"); // 모달 안 제목
-const lightboxDesc = document.getElementById("lightboxDesc"); // 모달 안 설명
+// const lightboxTitle = document.getElementById("lightboxTitle"); // 모달 안 제목
+// const lightboxDesc = document.getElementById("lightboxDesc"); // 모달 안 설명
 const lightboxClose = document.getElementById("lightboxClose"); // 닫기 버튼
 
 // lightbox-trigger 클래스가 붙은 요소 전부 선택 
@@ -130,8 +130,8 @@ document.querySelectorAll(".lightbox-trigger").forEach((trigger) => {
     // 클릭한 요소의 data 속성값을 모달 안에 채워넣음
     lightboxImg.src = trigger.dataset.img;
     lightboxImg.alt = trigger.dataset.title;
-    lightboxTitle.textContent = trigger.dataset.title;
-    lightboxDesc.textContent = trigger.dataset.desc;
+    // lightboxTitle.textContent = trigger.dataset.title;
+    // lightboxDesc.textContent = trigger.dataset.desc;
     // active 클래스 추가 → CSS에서 opacity: 1, visibility: visible 로 전환되며 모달 등장
     lightbox.classList.add("active");
     // 모달 열린 동안 뒤 페이지 스크롤 방지
