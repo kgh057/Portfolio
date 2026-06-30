@@ -38,6 +38,10 @@ body {
   color: #fff;
 }
 
+a {
+  text-decoration: none;
+}
+
 /************************************* 상단 *************************************/
 header {
   position: fixed;
@@ -67,7 +71,6 @@ nav .nav-links a {
   position: relative;
   color: #fff;
   font-size: 16px;
-  text-decoration: none;
 }
 
 /************************************* 인트로 *************************************/
@@ -163,7 +166,6 @@ main {
   font-size: 16px;
   color: #6366f1;
   transition: all 0.3s;
-  text-decoration: none;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(99, 102, 241, 0.2);
 }
@@ -349,7 +351,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
   transition: all 0.3s;
 }
 
@@ -546,7 +547,6 @@ main {
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   padding: 28px 0;
-  text-decoration: none;
 }
 
 .contact-title {

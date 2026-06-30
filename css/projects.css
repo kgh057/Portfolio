@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/* 웹폰트 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/* 프리텐다드 폰트 */
+/* font-weight: 숫자입력;
+100 = Thin
+200 = ExtraLight (매우 얇음)
+300 = Light (얇음) 
+400 = Regular (보통)
+500 = Medium (중간)
+600 = SemiBold (약간 두꺼움)
+700 = Bold (두꺼움) 
+800 = ExtraBold (매우 두꺼움)
+900 = Black */
+
+::selection {
+  background-color: #6366f1;
+  color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 10px;
+}
+
+body {
+  font-family: "pretendard";
+  font-weight: 200;
+  background: #121212;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
