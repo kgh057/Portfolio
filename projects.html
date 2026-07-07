@@ -14,5 +14,182 @@
     <!-- 메인 JS -->
     <script src="js/projects.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <!-- 상단 -->
+    <header>
+      <div class="side">
+        <span>Portfolio</span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#intro">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About me</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 프로젝트 목록 -->
+    <main class="works-main">
+      <div class="container">
+
+        <!-- 카테고리 필터 -->
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="graphic">그래픽</button>
+        </div>
+
+        <!-- 프로젝트 그리드 -->
+        <div class="works-list">
+          <!-- 1. 마비노기 모바일 (Web) -->
+          <div class="work-item" data-category="web">
+            <a
+              href="https://kgh057.github.io/mabinogimobile/"
+              target="_blank"
+              class="work-image"
+            >
+              <img src="image/pj2.png" alt="마비노기모바일" />
+            </a>
+            <div class="work-header">
+              <h3 class="work-title">마비노기 모바일 웹사이트 리뉴얼</h3>
+              <div class="work-icons">
+                <a
+                  href="./file/마비노기모바일_PDF.pdf"
+                  target="_blank"
+                  class="work-icon"
+                >
+                  <img src="./image/link.png" alt="사이트 보기" />
+                </a>
+                <a
+                  href="https://github.com/kgh057/mabinogimobile"
+                  target="_blank"
+                  class="work-icon"
+                >
+                  <img src="./image/github1.png" alt="GitHub" />
+                </a>
+              </div>
+            </div>
+            <span class="work-desc">개인 프로젝트</span>
+            <div class="work-tags">
+              <span class="tag">Photoshop</span>
+              <span class="tag">Figma</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+
+          <!-- 2. 무지개맨션 (Web) -->
+          <div class="work-item" data-category="web">
+            <a
+              href="https://kgh057.github.io/muzigae-mansion/"
+              target="_blank"
+              class="work-image"
+            >
+              <img src="image/pj1.png" alt="무지개맨션" />
+            </a>
+            <div class="work-header">
+              <h3 class="work-title">무지개맨션 웹사이트 사용성 개선</h3>
+              <div class="work-icons">
+                <a
+                  href="./file/무지개맨션_PDF.pdf"
+                  target="_blank"
+                  class="work-icon"
+                >
+                  <img src="./image/link.png" alt="PDF 보기" />
+                </a>
+                <a
+                  href="https://github.com/kgh057/muzigae-mansion"
+                  target="_blank"
+                  class="work-icon"
+                >
+                  <img src="./image/github1.png" alt="GitHub" />
+                </a>
+              </div>
+            </div>
+            <span class="work-desc">개인 프로젝트</span>
+            <div class="work-tags">
+              <span class="tag">Photoshop</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+
+          <!-- 3. 데이지크 (그래픽) -->
+          <div class="work-item" data-category="graphic">
+            <div
+              class="work-image lightbox-trigger"
+              data-img="image/dasique3.png"
+              data-title="데이지크 모델컷을 활용한 AI 그래픽 작업"
+            >
+              <img
+                src="image/dasique3.png"
+                alt="데이지크 모델컷을 활용한 AI 그래픽 작업"
+              />
+            </div>
+            <div class="work-header">
+              <h3 class="work-title">
+                데이지크 모델컷을 활용한 AI 그래픽 작업
+              </h3>
+            </div>
+            <span class="work-desc">데이지크 수플레 컬러 팟</span>
+            <div class="work-tags">
+              <span class="tag">AI</span>
+              <span class="tag">Photoshop</span>
+            </div>
+          </div>
+
+          <!-- 4. 에스쁘아 (그래픽) -->
+          <div class="work-item" data-category="graphic">
+            <div
+              class="work-image lightbox-trigger"
+              data-img="image/espoir1.png"
+              data-title="에스쁘아 제품컷을 활용한 AI 그래픽 작업"
+            >
+              <img
+                src="image/espoir1.png"
+                alt="에스쁘아 제품컷을 활용한 AI 그래픽 작업"
+              />
+            </div>
+            <div class="work-header">
+              <h3 class="work-title">
+                에스쁘아 제품컷을 활용한 AI 그래픽 작업
+              </h3>
+            </div>
+            <span class="work-desc"
+              >에스쁘아 꾸뛰르 립틴트 글레이즈 '허쉬드 체리'</span
+            >
+            <div class="work-tags">
+              <span class="tag">AI</span>
+              <span class="tag">Photoshop</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 필터 결과가 없을 때 -->
+        <p class="no-result">해당 카테고리의 프로젝트가 없습니다.</p>
+      </div>
+    </main>
+
+    <!-- 프로젝트 모달 -->
+    <div class="lightbox-overlay" id="lightbox">
+      <div class="lightbox-box">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <img src="" alt="" class="lightbox-img" id="lightboxImg" />
+      </div>
+    </div>
+
+    <!-- 하단 -->
+    <footer>
+      <p>© 2026 Kim Geunhae</p>
+    </footer>
+
+    <!-- scroll-top -->
+    <button class="scroll-top" id="scrollTop">
+      <img src="./image/Arrow_up.svg" alt="arrow up" />
+    </button>
+  </body>
 </html>
