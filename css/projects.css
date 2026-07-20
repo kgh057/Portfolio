@@ -112,6 +112,7 @@ nav .nav-links a {
 }
 
 .filter-btn.active {
+  font-weight: 500;
   color: #6366f1;
 }
 
