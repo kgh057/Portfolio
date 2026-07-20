@@ -1,7 +1,7 @@
 /************************************* 카테고리 필터 *************************************/
 // 필터 버튼과 프로젝트 카드 전부 선택
 const filterButtons = document.querySelectorAll(".filter-btn");
-const workItems = document.querySelectorAll(".work-item");
+const workItems = document.querySelectorAll(".project-item");
 const noResult = document.querySelector(".no-result");
 
 filterButtons.forEach((btn) => {
