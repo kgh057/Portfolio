@@ -51,20 +51,20 @@ header {
   top: 0;
   right: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 30px 50px;
   z-index: 1000;
   backdrop-filter: blur(4px);
 }
 
-/* portfolio */
-.side span {
-  font-size: 16px;
+nav {
+  width: 100%;
 }
 
 nav .nav-links {
   display: flex;
+  justify-content: space-between;
   list-style: none;
   gap: 40px;
 }
@@ -72,7 +72,7 @@ nav .nav-links {
 nav .nav-links a {
   position: relative;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /************************************* 각 컨테이너 *************************************/
@@ -99,7 +99,7 @@ nav .nav-links a {
   background: none;
   border: none;
   font-family: inherit;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 200;
   color: rgba(255, 255, 255, 0.4);
   cursor: pointer;
@@ -107,13 +107,8 @@ nav .nav-links a {
   transition: color 0.3s;
 }
 
-.filter-btn:hover {
-  color: rgba(255, 255, 255, 0.8);
-}
-
 .filter-btn.active {
-  font-weight: 500;
-  color: #6366f1;
+  color: #fff;
 }
 
 /* 프로젝트가 없을 때 안내 문구 */
@@ -215,7 +210,6 @@ nav .nav-links a {
   gap: 8px;
   flex-wrap: wrap;
 }
-
 
 /************************************* 프로젝트 모달 (메인과 동일) *************************************/
 .lightbox-trigger {
